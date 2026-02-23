@@ -24,13 +24,13 @@
 </div>
 
 <!-- ROLE MENU -->
-<div id="roleMenu" class="role-menu">
-    <p onclick="goTo('employee_dashboard.html')">Employee</p>
-    <p onclick="goTo('dept_dashboard.html')">Department Head</p>
-    <p onclick="goTo('hr_dashboard.html')">HR</p>
-    <p onclick="goTo('mayor_dashboard.html')">Mayor</p>
+<!-- ROLE DROPDOWN -->
+<div id="roleMenu" class="role-dropdown">
+    <div onclick="goTo('employee_dashboard.html')">👤 Employee</div>
+    <div onclick="goTo('dept_dashboard.html')">🗂 Department Head</div>
+    <div onclick="goTo('hr_dashboard.html')">💼 HR</div>
+    <div onclick="goTo('mayor_dashboard.html')">🏛 Mayor</div>
 </div>
-
     <!-- FILTER -->
     <div class="filters">
         <span class="active">All</span>
@@ -75,20 +75,25 @@
 </div>
 
 </div>
-    <script>
-function goTo(page){
-    window.location.href = page;
-}
-</script>
-    <script>
+<script>
 function goTo(page){
     window.location.href = page;
 }
 
 function toggleRoles(){
-    let menu = document.getElementById("roleMenu");
-    menu.classList.toggle("show");
+    document.getElementById("roleMenu")
+        .classList.toggle("show");
 }
+
+/* CLOSE WHEN CLICK OUTSIDE */
+document.addEventListener("click", function(e){
+    const menu = document.getElementById("roleMenu");
+    const button = document.querySelector(".role-btn");
+
+    if(!menu.contains(e.target) && !button.contains(e.target)){
+        menu.classList.remove("show");
+    }
+});
 </script>
 
 </body>
