@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>HR Dashboard</title>
+  <style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+}
+
+/* DASHBOARD CONTAINER */
+.dashboard{
+    padding:20px;
+}
+
+/* BUTTON GROUP */
+.actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* NORMAL BUTTON */
+.btn{
+    padding:12px 18px;
+    text-decoration:none;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+}
+
+/* REQUEST BUTTON */
+.btn-request{
+    background:#007bff;
+}
+
+/* PROFILE BUTTON */
+.btn-profile{
+    background:#6c757d;
+}
+
+/* HR SPECIAL BUTTON */
+.btn-employee{
+    background:#28a745;
+}
+
+/* HOVER EFFECT */
+.btn:hover{
+    opacity:0.85;
+}
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="topbar">
+    <h2>HR Approvals</h2>
+</div>
+
+<!-- FILTER -->
+<div class="filters">
+    <span class="active">Pending</span>
+    <span>Approved</span>
+    <span>Rejected</span>
+</div>
+
+<!-- REQUESTS -->
+<div class="leave-card">
+    <p class="date">Maria Santos</p>
+    <p class="type">Vacation Leave</p>
+
+    <button class="approve">Approve</button>
+    <button class="reject">Reject</button>
+</div>
+
+
+<div class="leave-card">
+    <p class="date">Ana Lopez</p>
+    <p class="type">Emergency Leave</p>
+    <span class="status declined">Rejected</span>
+</div>
+  <div class="actions">
+
+        <a href="requests.html" class="btn btn-request">
+            📄 View Requests
+        </a>
+
+        <a href="profile.html" class="btn btn-profile">
+            👤 Profile
+        </a>
+
+        <!-- HR ONLY BUTTON DESIGN -->
+        <a href="#" class="btn btn-employee">
+            🧑‍💼 Manage Employees
+        </a>
+
+    </div>
+  
+
+<div class="bottom-nav">
+<a onclick="goTo('mayor_dashboard.html')">🏠</a>
+<a onclick="goTo('profile.html')">👤</a>
+</div>
+
+</div>
+
+<script>
+function goTo(page){
+window.location.href = page;
+}
+</script>
+
+</body>
+</html>
