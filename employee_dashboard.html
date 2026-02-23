@@ -14,7 +14,7 @@
     <!-- TOP BAR -->
     <div class="topbar">
         <h2>Leaves</h2>
-        <div class="add-btn">+</div>
+        <div class="add-btn" onclick="goTo('apply_leave.html')">+</div>
     </div>
 
     <!-- FILTER -->
@@ -25,11 +25,11 @@
     </div>
 
     <!-- LEAVE LIST -->
-    <div class="leave-card">
-        <p class="date">Wed, 16 Dec</p>
-        <p class="type">Casual Leave</p>
-        <span class="status waiting">Awaiting</span>
-    </div>
+    <div class="leave-card" onclick="goTo('requests.html')">
+    <p class="date">Wed, 16 Dec</p>
+    <p class="type">Casual Leave</p>
+    <span class="status waiting">Awaiting</span>
+</div>
 
     <div class="leave-card">
         <p class="date">Mon, 28 Nov</p>
@@ -45,12 +45,17 @@
 
     <!-- BOTTOM NAV -->
     <div class="bottom-nav">
-        <a class="active">🏠</a>
-        <a>📄</a>
-        <a>👤</a>
-    </div>
+    <a onclick="goTo('employee_dashboard.html')">🏠</a>
+    <a onclick="goTo('requests.html')">📄</a>
+    <a onclick="goTo('profile.html')">👤</a>
+</div>
 
 </div>
+    <script>
+function goTo(page){
+    window.location.href = page;
+}
+</script>
 
 </body>
 </html>
