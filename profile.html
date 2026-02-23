@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Profile</title>
+</head>
 
+<body>
+
+<div class="phone">
+
+<div class="topbar">
+    <h2>Profile</h2>
+</div>
+
+<div style="padding:20px">
+
+<div class="leave-card">
+    <h3>Juan Dela Cruz</h3>
+    <p>Position: Staff</p>
+    <p>Department: Accounting</p>
+</div>
+
+<button class="apply-btn"
+onclick="goTo('index.html')">
+Logout
+</button>
+
+</div>
+
+<div class="bottom-nav">
+    <a onclick="goTo('employee_dashboard.html')">🏠</a>
+    <a onclick="goTo('requests.html')">📄</a>
+    <a onclick="goTo('profile.html')">👤</a>
+</div>
+
+</div>
+
+<script>
+function goTo(page){
+window.location.href = page;
+}
+</script>
+
+</body>
+</html>
