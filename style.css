@@ -28,9 +28,11 @@
     background:white;
     border-radius:30px 30px 0 0;
     padding:25px;
+    margin-top:-40px; /* MAGIC LINE */
     min-height:70vh;
+    position:relative;
+    z-index:3;
 }
-
 .login-card input{
     width:100%;
     padding:14px;
@@ -93,6 +95,32 @@
 .filters .active{
     background:#6c63ff;
     color:white;
+}
+/* LOGIN HEADER */
+.login-header{
+    position:relative;
+    height:230px;
+    overflow:hidden;
+}
+
+/* TOP BACKGROUND IMAGE */
+.bg-image{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:url("images/login-bg.png") no-repeat center;
+    background-size:cover;
+}
+
+/* TEXT ABOVE IMAGE */
+.header-text{
+    position:relative;
+    z-index:2;
+    color:white;
+    padding:40px 25px;
 }
 
 /* LEAVE CARDS */
