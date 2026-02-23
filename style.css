@@ -228,34 +228,46 @@
     border:none;
     border-radius:12px;
 }
-/* ROLE SWITCH */
-.role-btn{
-    background:#eee;
-    border:none;
-    padding:6px 10px;
-    border-radius:8px;
-    margin-right:8px;
+/* ROLE DROPDOWN */
+.role-dropdown{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 210px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s ease;
+    z-index: 999;
 }
 
-.role-menu{
-    display:none;
-    background:white;
-    margin:10px 20px;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+.role-dropdown.show{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
-.role-menu p{
-    padding:12px;
-    border-bottom:1px solid #eee;
+.role-dropdown div{
+    padding: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
 }
 
-.role-menu p:last-child{
-    border:none;
+.role-dropdown div:last-child{
+    border-bottom: none;
 }
 
-.show{
-    display:block;
+.role-dropdown div:hover{
+    background: #f3e5f5;
+    color: #6a1b9a;
+}
 }
 .bottom-nav{
     position: fixed;
