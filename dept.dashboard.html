@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Department Requests</title>
+</head>
+
+<body>
+
+<div class="phone">
+
+<div class="topbar">
+   <h2>Department Requests</h2>
+</div>
+
+<!-- FILTER -->
+<div class="filters">
+    <span class="active">Pending</span>
+    <span>Approved</span>
+    <span>Rejected</span>
+</div>
+
+<div class="leave-card">
+<p class="date">Employee: Carlo Reyes</p>
+<p class="type">Casual Leave</p>
+
+<button class="approve">Forward</button>
+<button class="reject">Reject</button>
+</div>
+
+<div class="leave-card">
+    <p class="date">Juan Cruz</p>
+    <p class="type">Sick Leave</p>
+    <span class="status approved">Approved</span>
+</div>
+
+<div class="leave-card">
+    <p class="date">Ana Lopez</p>
+    <p class="type">Emergency Leave</p>
+    <span class="status declined">Rejected</span>
+</div>
+
+<div class="bottom-nav">
+<a onclick="goTo('mayor_dashboard.html')">🏠</a>
+<a onclick="goTo('profile.html')">👤</a>
+</div>
+
+</div>
+
+<script>
+function goTo(page){
+window.location.href = page;
+}
+</script>
+
+</body>
+</html>
