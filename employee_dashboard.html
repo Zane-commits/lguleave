@@ -13,9 +13,21 @@
 
     <!-- TOP BAR -->
     <div class="topbar">
-        <h2>Leaves</h2>
+    <h2>Leaves</h2>
+
+    <div>
+        <button class="role-btn" onclick="toggleRoles()">Switch</button>
         <div class="add-btn" onclick="goTo('apply_leave.html')">+</div>
     </div>
+</div>
+
+<!-- ROLE MENU -->
+<div id="roleMenu" class="role-menu">
+    <p onclick="goTo('employee_dashboard.html')">Employee</p>
+    <p onclick="goTo('dept_dashboard.html')">Department Head</p>
+    <p onclick="goTo('hr_dashboard.html')">HR</p>
+    <p onclick="goTo('mayor_dashboard.html')">Mayor</p>
+</div>
 
     <!-- FILTER -->
     <div class="filters">
@@ -54,6 +66,16 @@
     <script>
 function goTo(page){
     window.location.href = page;
+}
+</script>
+    <script>
+function goTo(page){
+    window.location.href = page;
+}
+
+function toggleRoles(){
+    let menu = document.getElementById("roleMenu");
+    menu.classList.toggle("show");
 }
 </script>
 
