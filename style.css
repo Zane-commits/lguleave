@@ -263,7 +263,7 @@
     left: 0;
     width: 100%;
     height: 65px;
-    background: #ffffff;
+    background: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -273,12 +273,12 @@
 
 .bottom-nav a{
     text-decoration: none;
-    color: #888;
+    color: #b39ddb; /* light purple inactive */
     font-size: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .bottom-nav a i{
@@ -286,6 +286,12 @@
     margin-bottom: 3px;
 }
 
+/* ACTIVE PAGE */
+.bottom-nav a.active{
+    color: #6a1b9a; /* MAIN PURPLE */
+}
+
+/* HOVER EFFECT */
 .bottom-nav a:hover{
-    color: #4CAF50; /* dashboard color */
+    color: #8e24aa;
 }
