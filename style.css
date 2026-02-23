@@ -171,3 +171,31 @@
     padding:12px;
     border-top:1px solid #eee;
 }
+/* =========================
+   TABLET VIEW
+========================= */
+@media (min-width: 600px){
+
+    body{
+        background:#e9ecf3;
+    }
+
+    .phone{
+        margin:30px auto;
+        border-radius:25px;
+        overflow:hidden;
+        box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+}
+/* =========================
+   DESKTOP VIEW
+========================= */
+@media (min-width: 1024px){
+
+    .phone{
+        max-width:420px;
+        min-height:800px;
+    }
+
+}
